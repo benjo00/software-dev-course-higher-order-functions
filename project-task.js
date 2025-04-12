@@ -15,7 +15,7 @@ They will:
 // ============================================
 // 📦 Starting Dataset: Product List
 // ============================================
-
+/*
 const products = [
   { name: "Laptop", price: 1000, inStock: true },
   { name: "Phone", price: 500, inStock: false },
@@ -23,7 +23,7 @@ const products = [
   { name: "Monitor", price: 300, inStock: true },
   { name: "Keyboard", price: 100, inStock: false },
 ];
-
+*/
 // ============================================
 // 🔧 Tasks
 // ============================================
@@ -44,7 +44,21 @@ Step-by-Step:
 3. Return the filtered result.
 */
 
+const products = [
+  { name: "Laptop", price: 1000, inStock: true },
+  { name: "Phone", price: 500, inStock: false },
+  { name: "Tablet", price: 800, inStock: true },
+  { name: "Monitor", price: 300, inStock: true },
+  { name: "Keyboard", price: 100, inStock: false },
+];
 
+function filterProducts(productArray, callback) {
+  return productArray.filter(callback);
+  
+}
+let availableProducts = filterProducts(products, product => product.inStock === true);
+
+console.log(availableProducts);
 /*
 🔹 Task 2: Transform Product Names
 
